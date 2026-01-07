@@ -1,63 +1,64 @@
-# Text Analyzer CLI
+# 📝 Text Analyzer CLI
 
-A Python-based Command Line Interface (CLI) that demonstrates core NLP preprocessing concepts with Rich-powered terminal output and structured JSON support.
+A powerful **Python-based Command Line Interface (CLI)** that demonstrates **core NLP preprocessing concepts** with beautiful Rich-based output and structured JSON support.
 
-This project is built for learning, interviews, and showcasing NLP fundamentals in a clean, production-style CLI.
-
----
-
-## Features
-
-* Tokenization
-
-  * Sentence tokenization
-  * Word tokenization
-  * LLM token estimation with approximate cost
-
-* Part-of-Speech (POS) Tagging
-
-  * POS tags with human‑readable descriptions
-
-* Named Entity Recognition (NER)
-
-  * Entity detection (PERSON, ORG, GPE, etc.)
-  * BIO tagging (B / I / O)
-
-* Stemming
-
-  * Porter
-  * Snowball
-  * Lancaster
-  * Marks invalid stems clearly
-
-* Lemmatization
-
-  * POS‑aware lemmatization
-
-* Stem vs Lemma Comparison
-
-* Full Analysis Command
-
-  * Combines all NLP steps with execution timing
-
-* Disk I/O Support
-
-  * Read input from text files
-  * Save output as JSON
-
-* JSON Output Mode
-
-  * Machine‑readable output for pipelines and automation
-
-* Unit Tested
-
-  * Test coverage using Pytest
+This project is designed for **learning, interviews, and showcasing NLP fundamentals** in a clean, production-style CLI.
 
 ---
 
-## Project Structure
+## 🚀 Features
 
+### 🔤 Tokenization
 
+* Sentence tokens
+* Word tokens
+* LLM token estimation with cost
+
+### 🏷️ Part-of-Speech (POS) Tagging
+
+* POS tags with human-readable descriptions
+
+### 🎯 Named Entity Recognition (NER)
+
+* Entity detection (PERSON, ORG, GPE, etc.)
+* BIO tagging (B- / I- / O)
+
+### 🌿 Stemming
+
+* Porter
+* Snowball
+* Lancaster
+* Invalid stems marked with ❌
+
+### 🌳 Lemmatization
+
+* POS-aware lemmatization
+
+### 🔬 Stem vs Lemma Comparison
+
+### 📊 Full Analysis Command
+
+* Combines all NLP steps
+* Rich tables + timing
+
+### 📁 Disk I/O Support
+
+* Read input from text files
+* Save output as JSON files
+
+### 📦 JSON Output Mode
+
+* Machine-readable output for pipelines
+
+### 🧪 Unit Tested
+
+* All tests passing with Pytest
+
+---
+
+## 📁 Project Structure
+
+```text
 text-analyzer/
 ├── app/
 │   ├── __init__.py
@@ -75,164 +76,198 @@ text-analyzer/
 │   └── test_ner.py
 ├── requirements.txt
 └── README.md
-
+```
 
 ---
 
-## Installation
+## ⚙️ Installation
 
-### 1. Clone the repository
+### 1️⃣ Clone the repository
 
-bash
+```bash
 git clone https://github.com/<your-username>/text-analyzer.git
 cd text-analyzer
+```
 
+### 2️⃣ Create and activate virtual environment
 
-### 2. Create and activate a virtual environment
-
-bash
+```bash
 python -m venv venv
+```
 
+**Windows**
 
-*Windows*
-
-bash
+```bash
 venv\Scripts\activate
+```
 
+**Linux / macOS**
 
-*Linux / macOS*
-
-bash
+```bash
 source venv/bin/activate
+```
 
+### 3️⃣ Install dependencies
 
-### 3. Install dependencies
-
-bash
+```bash
 pip install -r requirements.txt
-
+```
 
 ---
 
-## CLI Usage
+## 🧠 CLI Usage
 
 All commands are run using:
 
-bash
+```bash
 python main.py <command> [OPTIONS]
+```
 
+---
 
-### Tokenization
+### 🔤 Tokenization
 
-bash
+```bash
 python main.py tokenize "Dr. Strange opened a portal!"
+```
 
+✔ Sentence tokens
+✔ Word tokens
+✔ LLM token estimate + cost
 
-Outputs sentence tokens, word tokens, and LLM token estimate with cost.
+---
 
-### POS Tagging
+### 🏷️ POS Tagging
 
-bash
+```bash
 python main.py pos "Naruto trained hard at the academy"
-
+```
 
 Displays token, POS tag, and description in a Rich table.
 
-### Named Entity Recognition
+---
 
-bash
+### 🎯 Named Entity Recognition
+
+```bash
 python main.py ner "Elon Musk founded SpaceX in California"
+```
 
+* Detected entities
+* BIO tags per token
 
-Outputs detected entities and BIO tags per token.
+---
 
-### Stemming
+### 🌿 Stemming
 
-bash
+```bash
 python main.py stem "running studies easily happiness"
+```
 
+Shows all three stemming algorithms with ❌ for invalid stems.
 
-Shows Porter, Snowball, and Lancaster stems with invalid stems highlighted.
+---
 
-### Lemmatization
+### 🌳 Lemmatization
 
-bash
+```bash
 python main.py lemmatize "The Avengers were fighting Thanos"
+```
 
+POS-aware lemmatization output.
 
-Performs POS‑aware lemmatization.
+---
 
-### Compare: Stemming vs Lemmatization
+### 🔬 Compare: Stemming vs Lemmatization
 
-bash
+```bash
 python main.py compare "running studies better easily"
+```
 
+Includes:
 
-Includes comparison summary and winner per word.
+* Winner per word
+* Summary statistics
 
-### Full Analysis
+---
 
-bash
+### 📊 Full Analysis
+
+```bash
 python main.py analyze "Tony Stark built Jarvis in Malibu"
+```
 
+Combines:
 
-Runs tokenization, POS, lemmas, stemming, NER, BIO tags, and execution time.
+* Tokenization
+* POS + Lemmas
+* Stemming
+* NER
+* BIO tags
+* Execution time
 
 ---
 
-## Disk I/O
+### 📁 Read Input from File (Disk I/O)
 
-### Read input from a file
-
-bash
+```bash
 python main.py analyze --file input.txt
+```
 
+✔ Useful for large texts
+✔ Enables batch processing
+✔ Real-world pipeline friendly
 
-Useful for large texts, batch processing, and automation workflows.
+---
 
-### Save output to a JSON file
+### 💾 Save Output to JSON File
 
-bash
+```bash
 python main.py analyze --file input.txt --out result.json
+```
 
+* Output is pure JSON
+* Can be consumed by APIs, ML pipelines, or dashboards
+* You may use any filename, not just `result.json`
 
-Produces structured JSON suitable for APIs, ML pipelines, or dashboards.
+---
 
-### JSON output to terminal
+### 🧾 JSON Output Mode
 
-bash
+```bash
 python main.py analyze "Tony Stark built Jarvis in Malibu" --json-output
+```
 
-
-Prints JSON directly to the terminal.
+Prints structured JSON directly to the terminal.
 
 ---
 
-## Running Tests
+## 🧪 Running Tests
 
-bash
+```bash
 pytest -v
+```
 
-
-Covers tokenization, POS tagging, NER, stemming, and lemmatization.
+✅ All tests passing
+✅ Covers tokenization, POS, NER, stemming, lemmatization
 
 ---
 
-## Why Disk I/O and JSON Output Matter
+## 🎯 Why Disk I/O & JSON Output Matter
 
-*Disk I/O*
+### Disk I/O
 
-* Enables real‑world usage for large text inputs
-* Supports automation and batch NLP pipelines
+* Enables real-world usage (files > terminal strings)
+* Supports automation & batch NLP jobs
 
-*JSON Output*
+### JSON Output
 
 * Standard data exchange format
-* Easy integration with ML models, APIs, and dashboards
+* Easy integration with ML models, APIs, and frontends
 
 ---
 
-## Tech Stack
+## 📌 Tech Stack
 
 * Python 3.10+
 * Typer (CLI framework)
@@ -243,17 +278,19 @@ Covers tokenization, POS tagging, NER, stemming, and lemmatization.
 
 ---
 
-## Status
+## 🏁 Status
 
-* Mentor checklist items completed
-* CLI UX polished
-* Tests stable
-* Repository ready for GitHub
+✔ All mentor checklist items completed
+✔ CLI UX polished
+✔ Tests stable
+✔ GitHub-ready
 
 ---
 
-## Author
+## 🙌 Author
 
-*Aryika Patni*
+**Aryika Patni**
 Final Year | NLP & ML Intern
-Focused on building clean, explainable, production‑style systems.
+Focused on building clean, explainable, production-style systems
+
+⭐ If you like this project, don’t forget to star the repo!
