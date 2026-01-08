@@ -2,8 +2,6 @@
 
 A powerful **Python-based Command Line Interface (CLI)** that demonstrates **core NLP preprocessing concepts** with beautiful Rich-based output and structured JSON support.
 
-This project is designed for **learning, interviews, and showcasing NLP fundamentals** in a clean, production-style CLI.
-
 ---
 
 ## 🚀 Features
@@ -253,20 +251,6 @@ pytest -v
 
 ---
 
-## 🎯 Why Disk I/O & JSON Output Matter
-
-### Disk I/O
-
-* Enables real-world usage (files > terminal strings)
-* Supports automation & batch NLP jobs
-
-### JSON Output
-
-* Standard data exchange format
-* Easy integration with ML models, APIs, and frontends
-
----
-
 ## 📌 Tech Stack
 
 * Python 3.10+
@@ -278,19 +262,6 @@ pytest -v
 
 ---
 
-## 🏁 Status
-
-✔ All mentor checklist items completed
-✔ CLI UX polished
-✔ Tests stable
-✔ GitHub-ready
-
----
-
-## 🙌 Author
+## Author
 
 **Aryika Patni**
-Final Year | NLP & ML Intern
-Focused on building clean, explainable, production-style systems
-
-⭐ If you like this project, don’t forget to star the repo!
