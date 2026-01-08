@@ -1,0 +1,324 @@
+---
+granola_id: 83d7a5e1-841e-4a10-891b-2d5da200fb7a
+title: "Jenil Demo"
+created_at: 2025-11-08T05:31:00.344Z
+updated_at: 2025-11-10T04:10:44.729Z
+---
+
+# Jenil Demo
+
+### Demo Overview
+
+- Jenil presented machine learning project on customer segmentation
+- Dataset: E-commerce transactions with invoice numbers, stock codes, quantities, dates, prices, customer IDs, countries
+- Goal: Predict customer behavior and purchasing patterns for business recommendations
+
+### Data Processing & Cleaning
+
+- Initial dataset: 541,909 records with 51,000+ unique customers
+- Key issues identified:
+  - Missing values in customer IDs (1,454 null values)
+  - Negative quantities indicating returns/cancellations
+  - Zero unit prices requiring investigation
+- Data transformation steps:
+  - Created total sales column (quantity × unit price)
+  - Merged transaction data with last transaction dates
+  - Removed outliers using interquartile range method
+  - Applied mean scaling for normalization
+
+### Machine Learning Implementation
+
+- Used unsupervised clustering algorithm for customer segmentation
+- Applied elbow method to determine optimal number of clusters (3 clusters identified)
+- Model accuracy achieved: 0.78 (78%)
+- Visualization through scatter plots and heat maps for correlation analysis
+
+### Real-World Applications
+
+- E-commerce website product recommendations
+- Customer behavior prediction for targeted marketing
+- Inventory management based on purchasing patterns
+- Discount strategy optimization for different customer segments
+
+### Next Steps
+
+- Jenil to prepare title and abstract for presentation
+- Schedule formal presentation for November 16th or 23rd
+- Create 4-line bio introduction for Jenil
+- Develop streamlit application for better audience understanding
+
+
+
+# Transcript
+
+**Them** *(11:01:01)*: Good morning.
+
+**Me** *(11:01:01)*: Hello. Et कैसे शहर? ना तू कहा था मैंने को खैर you have like forty five, fifty minutes बराबर? No. Sorry. Sorry हां victim
+
+**Them** *(11:01:32)*: अरे सब हां मैंने largest हमें बहुत कमरा जो है तबे करो तूने तो मैं code ready करी नहीं दूसरे आते मूंक्ली दी दो तो.
+
+**Me** *(11:01:43)*: हां एक वक़्त बताई देना एक वक़त गुत्रु का है ना कि तू क्यों नहीं था explain करिए score ना आना है. TV तो समझ का manage है ना basic AI में allowed है बराबर? Don't start from what is ML. बराबर. मान तो मैं जान पाती हूं. तो तारु चालू का confirmation है side पर. पुछा. आज ऐसा मैं AWS ना cognitive user से. आपने जो card है वह यह ad दिले ना user बोलना user से तुम्हारा. एक है यह जो ऊपर से. IDS मत अच्छा है मतलब कादाज cognitoma थी काड़ी नाचा है उसे. कोई sign off करी हुई था तो account delete करी हुई थी वह पैसा. I परसों कुछ हिलेवानी है मेरा. कि there is 14,000 users in 13,604 users in Cognito. Does it mean that 400 users are deleted or their account is being deleted and everything. जैसे तारी screen देखा है seven open blue हुआ है उसे. हां देखा देते
+
+**Them** *(11:03:35)*: Ok. जो पहला तो छह minute आंबड़ तू है, बुरो बार छह minute आंबड़ तू अपना केवन ज़रूरत ना पड़े है. बराबर केन्दू अपना करिए से नाम पाए multiple operations
+
+**Me** *(11:04:02)*: Hello?
+
+**Them** *(11:04:07)*: models team in intermediate level
+
+**Me** *(11:04:28)*: So, generally, what I'm saying is treat me as a user, as an audience, तो एक तारूट भी यह थे यह सब.
+
+**Them** *(11:04:38)*: Okay. Okay. Okay. Pandas.pd Pandas and पहले चीज़ चालू करूं ना sir तो बची.
+
+**Me** *(11:04:49)*: मैं ना अरे Yes yes.
+
+**Them** *(11:04:55)*: Data fetch. Any matter अपने सुकेवाई data nation है यह जी अप्रो data चाहिए ना अपने data variable store data dot head head invoice number हैं, stock code हैं, description quantity हैं, invoice date हैं, unit price हैं, customer ID हैं, and country हैं. बराबर sir normal basic information तो मरी गई है. अब आपने आगे internal information type eight time तो क्या आप ने show date time जब एक भी date time जो देखा तू ना दिया ma'am m ने आने object निजे हम treat
+
+**Me** *(11:05:55)*: Right.
+
+**Them** *(11:06:02)*: totally use describe math machine learning model mathematical intuitions describe the t no use. So t is as is just transform transform Okay? Describe function आ रहा है like quantity चाहे तो कि any का any values unit price customer ID के different different. कोई भी customer से एक बार तो vouchering multiple times voucher बराबर से. बस यह ना mean आपके mean ख़बर पर से standard deviation ख़बर से mathematical intuition overview data internally so, align numeric, non numeric feature. Like, numeric feature quantity, unit price, and customer. पर वह बच्चा है. हमें अपनी जोड़चा है description part. Numerical intuition numerical intuition है तो क्योंकि unique, हां unique values का ही केशा है. Top पर का ही के ही चाहे, frequently normal data अब यह अपने data में यह unwanted values values needle. Non null values. Null values normal values accuracy down non non non non non age value 1,454 values
+
+**Me** *(11:08:22)*: That
+
+**Them** *(11:08:22)*: and customer IDs. Okay? Customer IDs duplicate
+
+**Me** *(11:08:23)*: Right.
+
+**Them** *(11:08:32)*: model technology techno customer customer नहीं target customer ना behavior
+
+**Me** *(11:08:41)*: Enjoy it. Mhmm.
+
+**Them** *(11:08:56)*: fifty four five lakhs 51 41,909, Rono, 40,000.
+
+**Me** *(11:09:08)*: For next.
+
+**Them** *(11:09:09)*: बोलो बच्चा sir कैसे दी?
+
+**Me** *(11:09:11)*: $1.04 lakh रोज़ है. बराबर है
+
+**Them** *(11:09:16)*: A ver, ¿habrá ahí?
+
+**Me** *(11:09:16)*: Good
+
+**Them** *(11:09:18)*: Quantity to kind of end goal model train customer segmentation model train So main targets quantity. Quantity यहां पर देखा है sir छह आठ आठ छह बात रीसठ बरुबर से पढ़ाता है कि एक वनिषा के कैसा ना false quantity हुआ है और बोल चुका आपने check कर लेगा ना quantity पहला तो null तो छह नहीं कांट के null हो तो आपने यह दिखाई जाए पर हमें quantity zero करता होची भी तो हो ही सके चाहे कि अपन ने तो क्या भाई TV quantity भी हो ही सके चाहे minus one minus 12 minus 24 minus 11 minus one minus five quantity reality one real etima existed Okay, sir? In place, words to to unit price zero zero unit price means total amount of monetary values total sales add to the quantity unit price customer customer area find customer customer
+
+**Me** *(11:11:10)*: Two.
+
+**Them** *(11:11:13)*: quantity unit price multiply आप रोको कोता नौ column चाहे कि जेना थी आपने अगर आप process करी सु ा तो can you type अभी के pandas dot p d मतलब Pandas do a a a data frame any अगर हैरान करते नहीं है complete settle लेकिन है settle the number of transaction. Easily sell and then so feature Okay? Zero number customer ID +1 one time 47187182 times आया हुआ चाहे हा तो 756 time आया जाए. Intuitions normal transaction. Check model apply transaction last time मैंने कई वस्तुली दी थी. Last counter that's why last transaction issue. Okay? Last transaction merge.pd. Okay. Uh-huh. Internal intuitions, sir, आप समझाओ की व्यक्ति जी मारे थोड़ो हमा काम करो प्रश्न sir.
+
+**Me** *(11:13:19)*: कई बार तो नहीं. तो नहीं चाहिए लाकर बोलने बांधते नहीं.
+
+**Them** *(11:13:23)*: I'm a merger. Yeah. I merged table. का पहली normal इतना से समझाए उन्हें कि इतना समझा माटे मार थोड़ो दूं बस ऐसा.
+
+**Me** *(11:13:31)*: That's it. हां हां हां शांति तुझे take your time.
+
+**Them** *(11:13:40)*: Okay. Last transaction. Last last transaction modify new data frame यह थोड़ी सा नहीं हुआ था पर थी लाम भी होती. बरोबर से तो आपने non non numerical हुआ वस्तु हो चाहे के journey हुए आपने ज़रूरत ही देखा थी यह बोली वस्तु होने bypass कर देवा नहीं और आपको कोतानों data मत ही जितनी ज़रूरी चाहिए twelve eleven sales last transaction, quantity stock board unit price group buy. Curry? Customer ID and country group और last transaction ही साथ है यानी merge कर ही दी दो बराबर जी आप लोग first दिखा था कि जी आपने LT, LT में score करो हो जाए. Only three three call hold. Internal match add customer ID customer customer I know follow customer ID. New data frame data ready internal intuition visualize model
+
+**Me** *(11:15:48)*: ऐसा है last transaction मुझे छह. It should be number of transactions, right?
+
+**Them** *(11:16:02)*: हां हां हां हां हां हां बोलो बोलो बोलो बोलो बोलो बोलो. Change करी ना चाहे number of transaction करना किस्सा? ना ना ना
+
+**Me** *(11:16:11)*: जब क्या आपने कितना transactions थे?
+
+**Them** *(11:16:13)*: बोलो purchase में.
+
+**Me** *(11:16:14)*: एक second वह पंजा था लोग. है Plus ना ना ना ना.
+
+**Them** *(11:16:26)*: अरे यहां यहां नहीं यहां
+
+**Me** *(11:16:27)*: No. No. No. So how many customers like, transaction days days to last transaction, and and this transaction has been happening. Like, last transaction, कितलाटा इंति नदी थे मैं वह चक्ताज.
+
+**Them** *(11:16:50)*: थोड़े लो. हां, time थोड़ा नाने model लेते हैं process पर काम कर रहे तूने.
+
+**Me** *(11:16:54)*: Last transaction equals to invoice date max.
+
+**Them** *(11:16:55)*: Model
+
+**Me** *(11:17:00)*: Actual invoice date
+
+**Them** *(11:17:02)*: हां, इसलिए हाथ हुआ आज नहीं तूरे नहीं आई जैसे पिला नहीं आई जैसे इसलिए बनने नहीं minus करी है ना
+
+**Me** *(11:17:14)*: Okay. Sorry. Please continue.
+
+**Them** *(11:17:26)*: ती खलास सौती खलास वस्तु जो कोई machine learning model माटे हुए हैं तो कि यह outliers Interquantial range. पूरा एक minute. Change ed Okay? Interquartile range जितने के आ. जी अपने आनी अपने जो ही है चाहे candle interquartile range क्या हुआ है उन्हें बच्चे नीचे candle main range model predict interpertal range model fluctuate हां ना interquartile range जितने भी बाहर है values कि बच्ची value outlast remove model accuracy
+
+**Me** *(11:18:46)*: Damage कर रहा हूं.
+
+**Them** *(11:18:48)*: got okay? Data data internally correlated country सी भाई, विजा बद्दा त्यापारा जोड़े चाहे ना numerical numerical values चाहे कि जो non numerical values होने इन्हें numerical values में embed कर ही पड़े है. फेरों भी पड़ा है. अन्याना अच्छी है ना heat map check करो पड़ा है. तो heat map correlated जाए तो आपने direct हो गए model training model train to be honest, at the end of the day, useful data जी model ने model ने easily predict help. So first of all, cluster means clustering use तो कि यह unsupervised machine learning models है कि general supervised machine learning models normal है भाई थोड़ normalize machine learning आप? नहीं या थोड़ू interrupt कर दी थोड़ू environment कि लोगों को आवाडू आपको बस सूचना है कि sir कितना समझी सके. आप लोग main context तो आठवांच है. Mean make scalar find to care cloud proud to talk. Can I'm supervised machine learning? Normal. Normal. Machine learning through different different. Came in clustering suits, matter words normal. Clustering visualize
+
+**Me** *(11:21:27)*: Ok,
+
+**Them** *(11:21:27)*: करी से कहा internally समझ गया sir? बरोबर कैसा रहता है सुदीन उबलू. हां, तो बस mean max scalar यहां हमारा direct का भी दूसरा बरोबर है. हवा यहां कि अपने model training parts चालू था ऐसा. बरोबर मुझसे तो normalize करिए data three, three fifty seven thirty one eighteen seventy three. तो आपने आने एक three scale value 1,000 zero value value approve वधारे सारी इतना perform कर ही सकता है. Any matter आपने mean mix color को use करी है sir. बराबर है. Model train करोगा ना यह model पढ़ा हुई है सुबह direct करते हैं. To be in clustering clustering algorithm data कई जगह है कि रोहिलो से ना कि सुकेवाई, form a सुकेवाई, Cartesian Cartesian plane चार हज़ार almost 4,000 रोज़ है तो कि 4,000 होस तो possible है ना थी कि आप ना visualize करी सकती अपना plot मां Any matching clustering जानी सकीजिए कि कितना cluster ideally आप बनावाज हुई है. Any matter, yellow भी करी ना, अपने अगर install करी थी library आबारी. करो बच्चे यह album method दे perform chromati use MRIT album method है यह throat बता देते हैं. Algomethor सूच है तो कि आपने ideally quester यहां albumin value three होगा तो हो रही थी तत्व क्या clusters clusters clusters clusters बरोबर अब last four जो है लिए कि हां बेट लोगों तो आपने कर रही हूं last में model predict कर रहे हैं machine learning score. 7.8. 0.78. But अबे हमारा sir suit change करवाना होता है यह को.
+
+**Me** *(11:25:17)*: West coatings show करो. ऐसे coordination करो.
+
+**Them** *(11:25:33)*: Store JVV values values there. मतलब कि आनु behavior है तैयार है केऊं डाली रदुर पर के या कई वस्तु पर वज़ार है focus कई रोज़ है. अगर एक focus है तो quantity ऊपर at four quantity quantity base answer unit price per सुखिए भाई cite करो वहां से तो यह unit price थी पर अपने answer आपसे.
+
+**Me** *(11:26:07)*: Okay.
+
+**Them** *(11:26:10)*: Use
+
+**Me** *(11:26:11)*: M o x
+
+**Them** *(11:26:12)*: ecommerce use ecommerce website
+
+**Me** *(11:26:16)*: हां.
+
+**Them** *(11:26:27)*: now buy again
+
+**Me** *(11:26:42)*: Ok. Okay. So, like, in a real world, अगर अपने audience हैं, तो where I'll be using कैसे?
+
+**Them** *(11:26:51)*: As an audience,
+
+**Me** *(11:26:56)*: By the first of all, best exploration both are regional nations है. उन्हें आज carry कर दे but only तुम्हें what is a TCO? Ten. Home understanding सोचा है. Means they they will get very good understanding of how do I clean the data. Right? Yellow पृथ्वी appraisal है ना But like when would I use the term? Like, select values है.
+
+**Them** *(11:27:39)*: Patear esto, ¿sabe? ¿No? Normal life में तो मैं भी क्या रही आ सुखा है machine learning models ने use ना थी कर रहे हैं.
+
+**Me** *(11:27:50)*: बराबर.
+
+**Them** *(11:27:52)*: To be honest,
+
+**Me** *(11:27:53)*: Ok. Like, हां, तो like home time पूछने से provide करना है. This is very good. This can work out. But if you have this background, and I apply you can start with what to expect. तो you will have a better
+
+**Them** *(11:28:13)*: Okay. Sanjay, okay. Attention
+
+**Me** *(11:28:14)*: understanding here. Like, audience will have a better understanding of.
+
+**Them** *(11:28:18)*: attention seek value add
+
+**Me** *(11:28:19)*: That's of Yeah. They will be able to understand where this is going. They
+
+**Them** *(11:28:23)*: समझिए हो sir.
+
+**Me** *(11:28:26)*: what will they get out of it, you know.
+
+**Them** *(11:28:28)*: English
+
+**Me** *(11:28:32)*: मधुर्त चार से पिछ रहा था कि चार से. नहीं नहीं.
+
+**Them** *(11:28:36)*: Okay, sir. Dot p k l project
+
+**Me** *(11:28:48)*: आज बताएं पन polo बनाई है इसी ना time मैंने खाली m में इसलिए बताया उसने क्या like what do we add out of this? बराबर sir. Like क्या है बड़ा काम लाकर से?
+
+**Them** *(11:29:04)*: Mhmm.
+
+**Me** *(11:29:05)*: Via screamlet. N code नहीं बताना.
+
+**Them** *(11:29:08)*: Okay.
+
+**Me** *(11:29:08)*: This is more important of a code to to demo.
+
+**Them** *(11:29:13)*: Okay.
+
+**Me** *(11:29:15)*: आपको code नहीं बताना. नहीं लूं खाली expectations satisfy कर रहा हूं वाकि से
+
+**Them** *(11:29:21)*: Okay. Lead कि हां जो how Ok.
+
+**Me** *(11:29:34)*: इतना मतलब हमारे इधर जो है लेकर this is the code. यह तुम्हारा page पर जो जो But this is just to get understanding Actually, you can start with that. आऊंच है, as नीच है, कि we have this amount of data of our customers our customers in India and abroad. Now how can we identify which customer will buy more at what point to do whatever? So this is the problem
+
+**Them** *(11:30:03)*: Actually, our data real data
+
+**Me** *(11:30:08)*: So ok. Padlet क्या आंकड़ चाहिए?
+
+**Them** *(11:30:13)*: Our data center in there.
+
+**Me** *(11:30:15)*: तो.
+
+**Them** *(11:30:18)*: मान शुरू portal हो तो मैंने फ़ायदा model train करना चुका हूं.
+
+**Me** *(11:30:19)*: Are you authorized to use this data?
+
+**Them** *(11:30:22)*: Authorized.
+
+**Me** *(11:30:23)*: And it loses it.
+
+**Them** *(11:30:24)*: मैं कोई एक सारी website पर दे दो तो अपने data dot I dot data dot
+
+**Me** *(11:30:26)*: हां होती है. हरीन face पर थी रुपए का शतली तो वैसा. However नहीं friends, anyways like GB data search है.
+
+**Them** *(11:30:37)*: real life channel.
+
+**Me** *(11:30:40)*: What I was a real life check? तो this is the problem statement right कि to predict customer will buy how much and and what's the labels So how would you predict that? And how would you suggest that they any discount that to suits any outpaid problems that mentioned? Any solution but app पर आकर यह sense. तो पहला मैं भी एक drive हुई थी वह माना तो एक जंगल stores ही नहीं हमारे कोई branch में रिस्कुल के ऊपर.
+
+**Them** *(11:31:09)*: Borrowers.
+
+**Me** *(11:31:12)*: Is it getting like, this is enough. बराबर sir. A perfect chair. One,
+
+**Them** *(11:31:22)*: Technical
+
+**Me** *(11:31:35)*: But just to engross them, maybe ok, teamies क्या वापस हुए हैं एक business है.
+
+**Them** *(11:31:47)*: normal internal जो है अपने Jupiter वह book और college है हां अपनी माटेज है. Data
+
+**Me** *(11:32:17)*: Auto. Right.
+
+**Them** *(11:32:26)*: Age खाली समझा रहे से कांट क्या तो लक्वा जी है sir तो लगता डौड़ कर ला.
+
+**Me** *(11:32:31)*: क्या अब this is best explanation, तेरा मैंने twenty minutes में आपने पहले से आया हुआ one hour save का sir. Questionnaire मुझे नहीं पता साथ रहे बराबर?
+
+**Them** *(11:32:40)*: Direct direct question ना उसे पच्ची लोगों भी पूछे कैसे करवा करी रहे अच्छे बच्चे बच्चों को समझा दे दूं ऐसा कभी पुछ सके हां आम के माम के काट के आम आम वसूल जाकर different है.
+
+**Me** *(11:32:49)*: बस तो आए थी नाश के This is JSON device ticket update WhatsApp. के room में तो ख़रीद set है. इस if you have a streamlet, they will have a better understanding of where we are going. We have thus, we took training.
+
+**Them** *(11:33:11)*: As a developer
+
+**Me** *(11:33:12)*: Mhmm. It's perfect.
+
+**Them** *(11:33:17)*: Okay, sir.
+
+**Me** *(11:33:18)*: बस तो मैंने चाहूंगा तू title abstract copy there.
+
+**Them** *(11:33:20)*: Hence,
+
+**Me** *(11:33:24)*: भी ना खाली title है ना abstract copy दे बने. उन्हें तानु कार्वी intro के ही थे करवाने channel. सारा सारा भी से बेहतर आपने publish करी दिया था.
+
+**Them** *(11:33:38)*: introocate ना करो. So as a student touch करी तो ना?
+
+**Me** *(11:33:38)*: बराबर? April store के ऊपर नाला करूंगा.
+
+**Them** *(11:33:44)*: हां तो ML developer. ML developer
+
+**Me** *(11:33:47)*: पहले मैंने तो lucky ना तो लूंगा how do I introduce you? Like, okay. I'm he's studying in
+
+**Them** *(11:33:54)*: Pardon?
+
+**Me** *(11:33:56)*: this college, and he has barum. He is doing this. He needs to do this, and currently,
+
+**Them** *(11:34:04)*: Okay. About myself.
+
+**Me** *(11:34:05)*: I'm marked in the stadiats. Oh, obviously.
+
+**Them** *(11:34:07)*: Four four four lines in four lines.
+
+**Me** *(11:34:08)*: हां two four nine star था
+
+**Them** *(11:34:09)*: Okay.
+
+**Me** *(11:34:11)*: हां.
+
+**Them** *(11:34:19)*: Photo title. Projects hands on machine learning with Google Colab.
+
+**Me** *(11:34:26)*: I'll make your cup wings. Okay. Perfect. Date. एक second. Ok.
+
+**Them** *(11:34:49)*: हां, चाल से, 16 भी चाल से मना है. चाल से.
+
+**Me** *(11:35:00)*: 16 best है sir. चलो finalize three neck off.
+
+**Them** *(11:35:04)*: Abandone, sir.
+
+**Me** *(11:35:04)*: अच्छा.
+
+**Them** *(11:35:06)*: हां. अरे कई जगह तो हमें अंदर post मत लग ही देखो मैंने बात हो गया.
+
+**Me** *(11:35:07)*: Ok. तो decide करते ऐसा. हां हां हां.
+
+**Them** *(11:35:11)*: हां, ok sir.
+
+**Me** *(11:35:12)*: उनका ना update चलो हां मेरे
+
+**Them** *(11:35:12)*: Ok sir. हां sir. Thank you sir.
+
+**Me** *(11:35:14)*: Same premium bikes
+
+**Them** *(11:35:16)*: Bye. Have a nice day.
+
+**Me** *(11:35:22)*: Saturday.
