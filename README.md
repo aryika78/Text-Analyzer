@@ -58,9 +58,11 @@ A powerful **Python-based Command Line Interface (CLI)** that demonstrates **cor
 
 ```text
 text-analyzer/
+├── main.py                 # Application entry point
+├── conftest.py             
 ├── app/
 │   ├── __init__.py
-│   ├── cli.py              # CLI commands (Typer + Rich)
+│   ├── cli.py              # Typer + Rich CLI commands
 │   ├── tokenizer.py        # Word, sentence & LLM tokenization
 │   ├── pos_tagger.py       # POS tagging
 │   ├── lemmatizer.py       # POS-aware lemmatization
@@ -73,7 +75,10 @@ text-analyzer/
 │   ├── test_stemmer.py
 │   └── test_ner.py
 ├── requirements.txt
+├── .gitignore
+├── Dockerfile
 └── README.md
+
 ```
 
 ---
