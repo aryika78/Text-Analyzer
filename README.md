@@ -66,13 +66,9 @@ This project is **fully Dockerized**, making it portable, reproducible, and runn
 
 ```text
 text-analyzer/
-<<<<<<< HEAD
 ├── main.py                 # Application entry point
 ├── conftest.py             
-├── app/
-=======
 ├── app/                    # Core application logic
->>>>>>> 26c4971 (Dockerize project, update README and gitignore)
 │   ├── __init__.py
 │   ├── cli.py              # Typer + Rich CLI commands
 │   ├── tokenizer.py        # Word, sentence & LLM tokenization
@@ -88,19 +84,12 @@ text-analyzer/
 │   ├── test_stemmer.py
 │   └── test_ner.py
 │
-├── main.py                 # Application entry point
-├── conftest.py
 ├── Dockerfile              # Docker image definition
 ├── .dockerignore
 ├── .gitignore
 ├── requirements.txt
-├── .gitignore
-├── Dockerfile
 └── README.md
-
 ```
-
-> 🧹 **Note:** Runtime-generated files (JSON outputs, input samples, Docker volume outputs, virtual environments, and backup files) are excluded from GitHub using `.gitignore`.
 
 ---
 
