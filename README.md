@@ -2,6 +2,8 @@
 
 A powerful **Python-based Command Line Interface (CLI)** that demonstrates **core NLP preprocessing concepts** with beautiful Rich-based output and structured JSON support.
 
+This project is **fully Dockerized**, making it portable, reproducible, and runnable on any machine without installing Python or dependencies.
+
 ---
 
 ## 🚀 Features
@@ -52,15 +54,25 @@ A powerful **Python-based Command Line Interface (CLI)** that demonstrates **cor
 
 * All tests passing with Pytest
 
+### 🐳 Dockerized
+
+* No local Python or dependencies required
+* Consistent execution across systems
+* Supports volume mounting for input/output
+
 ---
 
 ## 📁 Project Structure
 
 ```text
 text-analyzer/
+<<<<<<< HEAD
 ├── main.py                 # Application entry point
 ├── conftest.py             
 ├── app/
+=======
+├── app/                    # Core application logic
+>>>>>>> 26c4971 (Dockerize project, update README and gitignore)
 │   ├── __init__.py
 │   ├── cli.py              # Typer + Rich CLI commands
 │   ├── tokenizer.py        # Word, sentence & LLM tokenization
@@ -68,12 +80,19 @@ text-analyzer/
 │   ├── lemmatizer.py       # POS-aware lemmatization
 │   ├── stemmer.py          # Porter, Snowball, Lancaster
 │   └── ner.py              # NER + BIO tagging
-├── tests/
+│
+├── tests/                  # Pytest test cases
 │   ├── test_tokenizer.py
 │   ├── test_pos.py
 │   ├── test_lemmatizer.py
 │   ├── test_stemmer.py
 │   └── test_ner.py
+│
+├── main.py                 # Application entry point
+├── conftest.py
+├── Dockerfile              # Docker image definition
+├── .dockerignore
+├── .gitignore
 ├── requirements.txt
 ├── .gitignore
 ├── Dockerfile
@@ -81,9 +100,11 @@ text-analyzer/
 
 ```
 
+> 🧹 **Note:** Runtime-generated files (JSON outputs, input samples, Docker volume outputs, virtual environments, and backup files) are excluded from GitHub using `.gitignore`.
+
 ---
 
-## ⚙️ Installation
+## ⚙️ Installation (Local – Without Docker)
 
 ### 1️⃣ Clone the repository
 
@@ -118,9 +139,36 @@ pip install -r requirements.txt
 
 ---
 
-## 🧠 CLI Usage
+## 🐳 Docker Usage (Recommended)
 
-All commands are run using:
+### 🔹 Build Docker Image
+
+```bash
+docker build -t text-analyzer-cli .
+```
+
+### 🔹 Run CLI Command in Container
+
+```bash
+docker run --rm text-analyzer-cli tokenize "Dr. Strange opened a portal"
+```
+
+### 🔹 Run with Input File (Volume Mount)
+
+```bash
+docker run --rm \
+  -v ${PWD}/input.txt:/app/input.txt \
+  -v ${PWD}/docker-output:/app/docker-output \
+  text-analyzer-cli analyze --file input.txt --out docker-output/result.json
+```
+
+✔ Input taken from host
+✔ Output saved back to host
+✔ No container state retained
+
+---
+
+## 🧠 CLI Usage (Local or Docker)
 
 ```bash
 python main.py <command> [OPTIONS]
@@ -211,7 +259,7 @@ Combines:
 
 ---
 
-### 📁 Read Input from File (Disk I/O)
+### 📁 Read Input from File
 
 ```bash
 python main.py analyze --file input.txt
@@ -223,7 +271,7 @@ python main.py analyze --file input.txt
 
 ---
 
-### 💾 Save Output to JSON File
+### 💾 Save Output to JSON
 
 ```bash
 python main.py analyze --file input.txt --out result.json
@@ -231,7 +279,6 @@ python main.py analyze --file input.txt --out result.json
 
 * Output is pure JSON
 * Can be consumed by APIs, ML pipelines, or dashboards
-* You may use any filename, not just `result.json`
 
 ---
 
@@ -264,9 +311,12 @@ pytest -v
 * spaCy
 * NLTK
 * Pytest
+* Docker
 
 ---
 
-## Author
+## 👩‍💻 Author
 
 **Aryika Patni**
+
+> This project was built to demonstrate real-world NLP pipelines, clean CLI design, testing discipline, and production-ready Dockerization.
