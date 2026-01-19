@@ -98,7 +98,7 @@ text-analyzer/
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/text-analyzer.git
+git clone https://github.com/aryika78/text-analyzer.git
 cd text-analyzer
 ```
 
